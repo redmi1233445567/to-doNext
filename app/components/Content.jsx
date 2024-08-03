@@ -73,7 +73,7 @@ export default function Content() {
           return (
             <div className='text2' key={da.id}>
               <div className='box'>
-                <input type='checkbox' name='check' value='no' className='check' onClick={() => addDone(da.id)}/>
+                <input type='checkbox' name='check' value='no' className='check' onClick={() => {addDone(da.id); All()}}/>
                 <p className={da.done === true ? "done" : ""}>{da.text}</p>
                 <p onClick={() => clearOnee(da.id)}>X</p>
               </div>
