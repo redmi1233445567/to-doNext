@@ -4,12 +4,14 @@ import {useDoStore} from '../storeData/store'
 
 
 export default function Input() {
-  const addDo = useDoStore(state => state.addDo)
+  const addDo = useDoStore(state => state.addDo);
+  const one = document.querySelector(".cont")
   const ref1 = useRef()
   function clickInp () {
     const val = ref1.current.value;
     addDo({id: Math.random(), text: val, done: false, delete: false})
-    ref1.current.value = ""
+    ref1.current.value = "";
+    console.log(one)
   }
 
   return (

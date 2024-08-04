@@ -219,6 +219,7 @@
   .container .text2 .box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
     gap: 15px;
     font-size: 15px;
@@ -226,7 +227,7 @@
     transition: 1s;
   }
   
-  .container .text2 .box p:nth-child(2) {
+  .container .text2 .box p:nth-child(1) {
     flex: 1;
   }
   
@@ -349,4 +350,5 @@
   
   .done {
     text-decoration: line-through;
+    color: red;
   }

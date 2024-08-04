@@ -23,7 +23,8 @@ export default function Content() {
   }
 
   useEffect(() => {
-    setData(dos)
+    setData(dos);
+    All()
   }, [dos.length])
 
   const active = () =>{
@@ -54,17 +55,6 @@ export default function Content() {
     ref0.current.className = "";
   }
 
-  
-
-//   const clearAll = () => {
-//     for (let i= 0; i<dataPro.length; i++) {
-//       if (dataPro[i].done === true || dataPro[i].done === false) {
-//       dataPro.pop(dataPro[i])
-//     }
-//   }
-//     setDa(dataPro);
-//     forceUpdate()
-//   }
 
   
   return (
@@ -73,8 +63,8 @@ export default function Content() {
           return (
             <div className='text2' key={da.id}>
               <div className='box'>
-                <input type='checkbox' name='check' value='no' className='check' onClick={() => {addDone(da.id); All()}}/>
-                <p className={da.done === true ? "done" : ""}>{da.text}</p>
+                {/* <input type='checkbox' name='check' value='no' className='check' onClick={() => {addDone(da.id); All()}}/> */}
+                <p className={da.done === true ? "done" : ""} onClick={() => {addDone(da.id); All()}}>{da.text}</p>
                 <p onClick={() => clearOnee(da.id)}>X</p>
               </div>
             </div>
@@ -85,7 +75,7 @@ export default function Content() {
             <p>{dos.length} items left</p>
             <p onClick={removeAllDos}>Clear All</p>
         </div>
-        <div>
+        <div className="cont">
             <span ref={ref0} className="active" onClick={All}>All</span>
             <span ref={ref1} onClick={active}>Active</span>
             <span ref={ref2} onClick={Complited}>Complited</span>
