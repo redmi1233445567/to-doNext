@@ -75,7 +75,7 @@ export default function Content() {
             <p>{dos.length} items left</p>
             <p onClick={removeAllDos}>Clear All</p>
         </div>
-        <div className="cont">
+        <div>
             <span ref={ref0} className="active" onClick={All}>All</span>
             <span ref={ref1} onClick={active}>Active</span>
             <span ref={ref2} onClick={Complited}>Complited</span>
